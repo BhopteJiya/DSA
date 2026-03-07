@@ -1,0 +1,26 @@
+
+#include <iostream>
+#include<map>
+using namespace std;
+
+int main()
+{ 
+ int n;
+ cin>>n;
+ int arr[n];
+ 
+ for(int i=0;i<n;i++){
+     cout<<"ele: ";
+     cin>>arr[i];
+ }
+ map<int,int>mp;
+ 
+ for(int j=0;j<n;j++){
+     mp[arr[j]]++;
+ }
+ for(auto g : mp){
+     cout<<g.first<<" ";
+ }
+  
+    return 0;
+}
