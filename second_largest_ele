@@ -1,0 +1,41 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+
+int func(int n, int arr[]){
+      
+      int maxi = INT_MIN;
+      int sec = INT_MIN;
+      
+      for(int i = 0; i < n; i++){
+          
+          if(arr[i] > maxi){
+              sec = maxi;
+              maxi = arr[i];
+          }
+          
+          else if(arr[i] > sec && arr[i] != maxi){
+              sec = arr[i];
+          }
+      }
+      
+      return sec;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int arr[n];
+
+    for(int i=0;i<n;i++){
+        cout<<"ele: ";
+        cin>>arr[i];
+    }
+
+    cout<<"Second Largest: ";
+    cout<<func(n, arr);
+
+    return 0;
+}
