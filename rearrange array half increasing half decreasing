@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    void rearrangeArray(vector<int>& arr) {
+        sort(arr.begin(), arr.end());
+
+        int n = arr.size();
+        reverse(arr.begin() + n / 2, arr.end());
+    }
+};
+
+int main() {
+    
+    int n;
+    cin>>n;
+    vector<int> arr(n);
+    for(int i=0;i<n;i++){
+        cout<<"ele: ";
+        cin>>arr[i];
+    }
+
+    Solution sol;
+    sol.rearrangeArray(arr);
+
+    for (int x : arr) cout << x << " ";
+}
