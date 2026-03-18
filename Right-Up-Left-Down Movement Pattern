@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int x = 0, y = 0;  
+    int distance = 10;  // initial dist
+
+    for(int i = 1; i <= n; i++) {
+
+        if(i % 4 == 1) {          // Right
+            x += distance;
+        }
+        else if(i % 4 == 2) {     // Up
+            y += distance;
+        }
+        else if(i % 4 == 3) {     // Left
+            x -= distance;
+        }
+        else {                    // Down
+            y -= distance;
+        }
+
+        distance += 10; 
+    }
+
+    cout << x << " " << y;
+
+    return 0;
+}
